@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Champagne d’Excellence</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Menu -->
+  <div class="menu">
+    <div class="hamburger-container" id="menu-btn">
+      <div class="hamburger"></div>
+      <span class="menu-text">Menu</span>
+    </div>
+    <nav class="dropdown" id="dropdown-menu">
+      <a href="index.html">Accueil</a>
+      <a href="page2.html">Produits</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Section contact -->
+  <header class="hero">
+    <h1>Contactez-nous</h1>
+    <p>Nous serons ravis d’échanger avec vous.</p>
+  </header>
+
+  <section class="contact-section">
+    <div class="contact-info">
+      <h2>Nos coordonnées</h2>
+      <p><strong>Adresse :</strong> 12 Rue de la Maison, Reims, France</p>
+      <p><strong>Téléphone :</strong> +33 3 26 00 00 00</p>
+      <p><strong>Email :</strong> contact@champagnedexcellence.fr</p>
+    </div>
+
+    <div class="contact-form">
+      <h2>Envoyez-nous un message</h2>
+      <form>
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Maison Champagne d’Excellence - Tous droits réservés</p>
+  </footer>
+
+  <!-- Script menu -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const dropdown = document.getElementById('dropdown-menu');
+
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dropdown.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!menuBtn.contains(e.target) && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
