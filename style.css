@@ -1,0 +1,187 @@
+
+
+
+h1 {
+  font-family: "Playfair Display", serif; /* Police chic et élégante */
+  font-size: 3em;
+  text-align: center; /* Centre le texte */
+  color: #2c2c2c;
+  margin-top: 5%; /* Descend un peu le titre au milieu de la page */
+}
+
+p {
+  text-align: center;       /* Centre horizontalement le texte */
+  font-size: 1.8em;
+  color: #555555;
+ margin-top: 2em;          /* Espace avec le titre */
+}
+
+.buttons {
+  display: flex;
+  justify-content: center; /* Centre les boutons horizontalement */
+  gap: 1.5em;             /* Espace entre les boutons */
+  margin-top: 2em;         /* Décalage sous le paragraphe */
+}
+button, .btn {
+  background-color: transparent;
+  border: 2px solid #2c2c2c;
+  color: #2c2c2c;
+  padding: 0.8em 2em;
+  font-size: 1em;
+  font-family: 'Playfair Display', serif;
+  cursor: pointer;
+  border-radius: 10px;
+  text-decoration: none; /* Pour le lien */
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: #2c2c2c;
+  color: #fdfdfd;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+
+h2 {
+  font-family: "Playfair Display", serif; /* Police chic et élégante */
+  font-size: 3em;
+  text-align: center; /* Centre le texte */
+  color: #2c2c2c;
+  margin-top:0%; /* Descend un peu le titre au milieu de la page */
+}
+
+
+body::after {
+  content: "";
+  position: absolute;
+  bottom: 80%;
+  left: 0;
+  width: 100%;
+  height: 30%; /* 10% de la hauteur */
+  background-color: rgba(0, 0, 0, 0.1); /* noir très léger */
+  pointer-events: none;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 3em;       /* plus d'espace horizontal entre les cartes */
+  flex-wrap: wrap;
+}
+
+/* Carte produit */
+.product-card {
+  margin-bottom: 3em; /* plus d'espace vertical entre les lignes de cartes */
+  background-color: #ffffff;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 15px;
+  padding: 1.5em;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Image produit */
+.product-image {
+  width: 100%;
+  height: 150px;
+  background-color: #e5e5e5;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
+/* Bouton */
+.product-card button {
+  background-color: transparent;
+  border: 2px solid #2c2c2c;
+  color: #2c2c2c;
+  padding: 0.5em 1.5em;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.product-card button:hover {
+  background-color: #2c2c2c;
+  color: #fdfdfd;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+.menu {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+
+/* Hamburger + texte */
+.hamburger-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  cursor: pointer;
+}
+
+.hamburger {
+  width: 30px;
+  height: 3px;
+  background-color: #2c2c2c;
+  position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #2c2c2c;
+}
+
+.hamburger::before { top: -10px; }
+.hamburger::after { top: 10px; }
+
+.menu-text {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  color: #2c2c2c;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: rgba(255,255,255,0.95);
+  border-radius: 10px;
+  padding: 1em;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+  z-index: 100;
+}
+
+.dropdown a {
+  display: block;
+  color: #2c2c2c;
+  font-family: 'Playfair Display', serif;
+  text-decoration: none;
+  padding: 0.5em 0;
+  transition: color 0.3s;
+}
+
+.dropdown a:hover {
+  color: #bfa14a;
+}
+
+/* Classe active pour afficher le menu */
+.dropdown.active {
+  display: block;
+}
